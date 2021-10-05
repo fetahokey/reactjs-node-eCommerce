@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Search, Mail, ShoppingBagOutlined } from '@mui/icons-material'
+import { Search, ShoppingBagOutlined } from '@mui/icons-material'
 import Badge from '@mui/material/Badge';
 
 const Container = styled.div`
@@ -8,16 +8,12 @@ const Container = styled.div`
 const Warpper = styled.div`
     padding: 10px 20px;
     display: flex;
-    //justify-content: space-between;
-
-
 `;
 const Left = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: end;
-    
 `;
 
 const MenuItem = styled.div`
