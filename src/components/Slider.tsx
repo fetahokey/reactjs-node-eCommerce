@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material';
-import { sliderData } from '../data';
+import { sliders } from '../data';
 
 const Container = styled.div`
     width:100%;
@@ -92,9 +92,9 @@ const Slider = () => {
     const handleClick = (direction: string): void => {
         (direction === "Left")
             ?
-            setSlideIndex((slideIndex > 0) ? slideIndex - 1 : sliderData.length - 1)
+            setSlideIndex((slideIndex > 0) ? slideIndex - 1 : sliders.length - 1)
             :
-            setSlideIndex((slideIndex < sliderData.length - 1) ? slideIndex + 1 : 0)
+            setSlideIndex((slideIndex < sliders.length - 1) ? slideIndex + 1 : 0)
 
     }
 
@@ -106,7 +106,7 @@ const Slider = () => {
             <Warpper sliderIndex={slideIndex}>
 
                 {
-                    sliderData.map((item) =>
+                    sliders.map((item) =>
                     (
                         <Slide bgColor={item.bgColor} key={item.id}>
                             <ImgContainer>
