@@ -44,11 +44,11 @@ export const categories = [
 export const popularProducts = [
     {
         id: 1,
-        img: 'assets/products/1.jpg'
+        img: 'assets/products/2.jpg'
     },
     {
         id: 2,
-        img: 'assets/products/4.jpg'
+        img: 'assets/products/7.jpg'
     },
     {
         id: 3,
@@ -68,11 +68,11 @@ export const popularProducts = [
     },
     {
         id: 7,
-        img: 'assets/products/16.jpg'
+        img: 'assets/products/3.jpg'
     },
     {
         id: 8,
-        img: 'assets/products/18.jpg'
+        img: 'assets/products/10.jpg'
     },
 
 ];
