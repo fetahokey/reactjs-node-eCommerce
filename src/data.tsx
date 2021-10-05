@@ -40,3 +40,39 @@ export const categories = [
         title: 'JACKT'
     }
 ];
+
+export const popularProducts = [
+    {
+        id: 1,
+        img: 'assets/products/1.jpg'
+    },
+    {
+        id: 2,
+        img: 'assets/products/4.jpg'
+    },
+    {
+        id: 3,
+        img: 'assets/products/6.jpg'
+    },
+    {
+        id: 4,
+        img: 'assets/products/12.jpg'
+    },
+    {
+        id: 5,
+        img: 'assets/products/8.jpg'
+    },
+    {
+        id: 6,
+        img: 'assets/products/14.jpg'
+    },
+    {
+        id: 7,
+        img: 'assets/products/16.jpg'
+    },
+    {
+        id: 8,
+        img: 'assets/products/18.jpg'
+    },
+
+];
