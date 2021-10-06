@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Announcement from '../components/Announcement';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
+import { mobile } from '../responsive';
 
 
 interface props {
@@ -18,6 +19,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
     padding: 20px;
+    ${mobile({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
@@ -43,7 +45,7 @@ const TopButton = styled.button<props>`
 `;
 
 const TopTexts = styled.div`
-
+     ${mobile({ display: "none" })}
 `;
 
 const TopText = styled.span`
@@ -55,6 +57,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
+    ${mobile({ flexDirection: "column" })}
 `;
 
 const Info = styled.div`
@@ -65,6 +68,7 @@ const Info = styled.div`
 const Product = styled.div`
     display: flex;
     justify-content: space-between;
+    ${mobile({ flexDirection: "column" })}
 `;
 
 const ProductDetail = styled.div`
@@ -177,7 +181,7 @@ const Cart = () => {
             <Announcement />
             <Navbar />
             <Wrapper>
-                <Title>Y're BAG !</Title>
+                <Title>MY BAG</Title>
                 <Top>
                     <TopButton>CONTINUE SHOPPING</TopButton>
                     <TopTexts>
