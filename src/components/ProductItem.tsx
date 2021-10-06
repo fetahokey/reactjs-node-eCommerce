@@ -3,6 +3,7 @@ import {
     ShoppingCartOutlined, SearchOutlined,
     FavoriteBorderOutlined
 } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     flex: 1;
@@ -71,6 +72,11 @@ const Icon = styled.div`
     }
 `;
 
+const LinkStyle = {
+    textDecoration: "none",
+    color: "inherit"
+}
+
 interface props {
     img: string
 }
@@ -81,9 +87,12 @@ const ProductItem = ({ img }: props) => {
             <Circle />
             <Image src={img} />
             <ContainerInfo>
-                <Icon>
-                    <ShoppingCartOutlined />
-                </Icon>
+                <Link to="/product" style={LinkStyle}>
+                    <Icon>
+                        <ShoppingCartOutlined />
+                    </Icon>
+                </Link>
+
                 <Icon>
                     <SearchOutlined />
                 </Icon>
