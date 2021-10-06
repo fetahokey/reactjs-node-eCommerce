@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { Send } from '@mui/icons-material';
+import { mobile } from '../responsive';
+
 
 const Container = styled.div`
     height: 60vh;
@@ -16,12 +18,14 @@ const Title = styled.h1`
     margin: 25px 0;
     font-size: 65px;
     letter-spacing: 2px;
+    ${mobile({ fontSize: "45px" })}
 `;
 
 const Desc = styled.p`
     font-size: 24px;
     word-spacing: 3px;
     margin-bottom: 25px;
+    ${mobile({ textAlign: "center" })}
 `;
 
 const Form = styled.form`
@@ -31,6 +35,7 @@ const Form = styled.form`
     justify-content: space-between;
     background-color: white;
     border: 1px solid lightgray;
+    ${mobile({ width: "70%" })}
 `;
 
 const Input = styled.input`
@@ -38,6 +43,7 @@ const Input = styled.input`
     border: none;
     font-size: 16px;
     outline-color: #eff7fa;
+
 `;
 
 const Button = styled.button`

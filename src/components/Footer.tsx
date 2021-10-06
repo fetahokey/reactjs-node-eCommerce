@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Facebook, Instagram, Twitter, MailOutline, Room, Dialpad } from '@mui/icons-material';
+import { mobile } from '../responsive';
 
 interface props {
     bgColor: string;
@@ -8,6 +9,7 @@ interface props {
 const Container = styled.div`
     display: flex;
     background-color: #e6ecee;
+    ${mobile({ flexDirection: "column" })}
     
 `;
 const Left = styled.div`

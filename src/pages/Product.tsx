@@ -4,6 +4,8 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 import { Remove, Add } from '@mui/icons-material';
+import { mobile } from '../responsive';
+import { Link } from 'react-router-dom';
 
 interface props {
     color?: string;
@@ -16,15 +18,22 @@ const Container = styled.div`
 const Warpper = styled.div`
     display: flex;
     padding: 50px;
+    ${mobile({ padding: "5px", flexDirection: "column" })}
 `;
 
 const ImgContainer = styled.div`
     flex:1;
+    ${mobile({
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+})}
 `;
 
 const Image = styled.img`
     // TODO handle big size image
     object-fit: cover;
+    ${mobile({ height: "50%" })}
 `;
 
 const InfoContainer = styled.div`
@@ -50,6 +59,7 @@ const FilterContainer = styled.div`
         justify-content: space-between;
         width: 70%;
         margin: 25px 0px;
+        ${mobile({ width: "100%" })}
 `;
 
 const Filter = styled.div`
@@ -86,6 +96,7 @@ const AddContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 70%;
+    ${mobile({ width: "100%" })}
 `;
 
 const AmountContainer = styled.div`
@@ -97,6 +108,8 @@ const AmountContainer = styled.div`
     *{
         cursor: pointer;
     }
+
+    
 `;
 
 const Amount = styled.span`
@@ -118,10 +131,19 @@ const Button = styled.button`
     cursor: pointer;
     transition: 0.8s all ease;
 
+    ${mobile({ padding: "10px" })}
+
     &:hover{
         background-color: rgba(169, 156, 241, 0.459);
     }
 `;
+
+const LinkStyle = {
+    textDecoration: "none",
+    color: "inherit"
+}
+
+
 const Product = () => {
     return (
         <Container>
@@ -164,7 +186,9 @@ const Product = () => {
                             <Amount>1</Amount>
                             <Add />
                         </AmountContainer>
-                        <Button>ADD TO CART</Button>
+                        <Link to="/cart" style={LinkStyle}>
+                            <Button>ADD TO CART</Button>
+                        </Link>
                     </AddContainer>
                 </InfoContainer>
             </Warpper>
